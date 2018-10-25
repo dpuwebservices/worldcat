@@ -7,6 +7,7 @@
 [Search URL parameters](https://help.oclc.org/Discovery_and_Reference/WorldCat_Discovery/Configure_WorldCat_Discovery/Configure_patron_facing_features#Add_a_WorldCat_Discovery_search_box_to_your_library_web_pages)
 
 [PALNI Examples](http://libguides.palni.edu/c.php?g=40962&p=378581)
+[PALNI code](https://github.com/lpmagnuson/discovery-tabbed-search )
 
 
 
