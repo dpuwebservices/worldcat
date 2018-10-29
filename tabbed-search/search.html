@@ -12,10 +12,8 @@
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script>
 jQuery(document).ready(function() {
-  alert("here");
     jQuery('.tabs .tab-links a').on('click', function(e)  {
         var currentAttrValue = jQuery(this).attr('href');
- alert(currentAttrValue);
         // Show/Hide Tabs
         jQuery('.tabs ' + currentAttrValue).show().siblings().hide();
  
