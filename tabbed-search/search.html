@@ -14,7 +14,6 @@
 <!--  *** DON"T INCLUDE JQUERY IN LIBGUIDE *** -->
 <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 <!--  *** DON"T INCLUDE JQUERY IN LIBGUIDE *** -->
-
 <script>
 jQuery(document).ready(function() {
     jQuery('.tabs .tab-links a').on('click', function(e)  {
@@ -47,17 +46,17 @@ $('.windowForm').submit(function(e){
 });
 //retain search term input when switching tabs
 $(document).ready(function(){
-    $('#query1').change(function() {
-    $('.searchbox').val($('#query1').val());
+    $('#queryEV').change(function() {
+    $('.searchbox').val($('#queryEV').val());
     });
-    $('#query2').change(function() {
-    $('.searchbox').val($('#query2').val());
+    $('#queryBK').change(function() {
+    $('.searchbox').val($('#queryBK').val());
     });
-    $('#query3').change(function() {
-    $('.searchbox').val($('#query3').val());
+    $('#queryAR').change(function() {
+    $('.searchbox').val($('#queryAR').val());
     });
-    $('#query4').change(function() {
-    $('.searchbox').val($('#query4').val());
+    $('#queryVI').change(function() {
+    $('.searchbox').val($('#queryVI').val());
     });
     });
 </script>
@@ -66,14 +65,14 @@ $(document).ready(function(){
 <div id="search-wrapper">
 <div class="tabs">
     <div class="tab-links" >
-        <a href="#tab1" class="selected"><h4><span class="fa fa-university fa-2x"></span><br /><span class="tab-label">Everything</span></h4></a>
-        <a href="#tab2"><h4><span class="fa fa-book fa-2x"></span><span class="tab-label"><br />Books</span></h4></a>
-        <a href="#tab3"><h4><span class="fa fa-list-alt fa-2x"></span><span class="tab-label"><br />Articles</span></h4></a>
-        <a href="#tab4"><h4><span class="fa fa-video-camera fa-2x"></span><span class="tab-label"><br />Video</span></h4></a>
+        <a href="#tabEV" class="selected"><h4><span class="fa fa-university fa-2x"></span><br /><span class="tab-label">Everything</span></h4></a>
+        <a href="#tabBK"><h4><span class="fa fa-book fa-2x"></span><span class="tab-label"><br />Books</span></h4></a>
+        <a href="#tabAR"><h4><span class="fa fa-list-alt fa-2x"></span><span class="tab-label"><br />Articles</span></h4></a>
+        <a href="#tabVI"><h4><span class="fa fa-video-camera fa-2x"></span><span class="tab-label"><br />Video</span></h4></a>
     </div>
  
     <div class="tab-content">
-        <div id="tab1" class="container tab active">            
+        <div id="tabEV" class="container tab active">            
              <form action="http://depaul.on.worldcat.org/search" class="windowForm" target="_blank" method="get" class="form-horizontal" role="form">
                            <div id="search">
                            <div class="search-title">
@@ -85,7 +84,7 @@ $(document).ready(function(){
                            </div>             
 
                            <div class="searchTerm">
-                            <input type="text" placeholder="Find books, videos, music, and more...." autofocus="autofocus" id="query1" class="searchbox form-control" name="queryString">
+                            <input type="text" placeholder="Find books, videos, music, and more...." autofocus="autofocus" id="queryEV" class="searchbox form-control" name="queryString">
 							<input type="submit" class="headersubmit form-control" value="&#xf002;" title="Search">
                            </div>
 
@@ -94,7 +93,7 @@ $(document).ready(function(){
                      </form>
         </div>
  
-        <div id="tab2" class="container tab">
+        <div id="tabBK" class="container tab">
             <form action="http://depaul.on.worldcat.org/search" target="_blank" method="get" class="form-horizontal" role="form">
                            <div id="search">
                            <div class="search-title">
@@ -107,7 +106,7 @@ $(document).ready(function(){
 
                            <div class="searchTerm">
                               <input type="hidden" name="sortKey" value="LIBRARY_PLUS_RELEVANCE">
-							  <input type="text" placeholder="Find books...." autofocus="autofocus" id="query2" class="searchbox form-control" name="queryString">
+							  <input type="text" placeholder="Find books...." autofocus="autofocus" id="queryBK" class="searchbox form-control" name="queryString">
                               <input type="hidden" name="format" value="Book">
 							  <input type="hidden" name="subformat" value="Book::book_printbook">
                               <input type="hidden" name="subformat" value="Book::book_digital">
@@ -130,7 +129,7 @@ $(document).ready(function(){
                      </form>
         </div>
  
-        <div id="tab3" class="container tab">
+        <div id="tabAR" class="container tab">
             <form action="http://depaul.on.worldcat.org/search" target="_blank" method="get" class="form-horizontal" role="form">
                            <div id="search">
                            <div class="search-title">
@@ -142,7 +141,7 @@ $(document).ready(function(){
                            <div class="searchTerm">
 							  <input type="hidden" name="sortKey" value="LIBRARY_PLUS_RELEVANCE">
 							  <input type="hidden" name="databaseList" value="638">
-							  <input type="text" placeholder="Find articles...." autofocus="autofocus" id="query3" class="searchbox form-control" name="queryString">
+							  <input type="text" placeholder="Find articles...." autofocus="autofocus" id="queryAR" class="searchbox form-control" name="queryString">
 							  <input type="hidden" name="format" value="Artchap">
                               <input type="hidden" name="subformat" value="Artchap::artchap_artcl">
 							<input type="submit" class="headersubmit form-control" value="&#xf002;" title="Search">
@@ -153,7 +152,7 @@ $(document).ready(function(){
                      </form>
         </div>
  
-        <div id="tab4" class="container tab">
+        <div id="tabVI" class="container tab">
            <form action="http://depaul.on.worldcat.org/search" target="_blank" method="get" class="form-horizontal" role="form">
                            <div id="search">
                            <div class="search-title">
@@ -165,7 +164,7 @@ $(document).ready(function(){
                            <div class="searchTerm">
 						      <input type="hidden" name="sortKey" value="LIBRARY_PLUS_RELEVANCE">
 							  <input type="hidden" name="databaseList" value="638">
-                              <input type="text" placeholder="Find videos...." autofocus="autofocus" id="query4" class="searchbox form-control" name="queryString">
+                              <input type="text" placeholder="Find videos...." autofocus="autofocus" id="queryVI" class="searchbox form-control" name="queryString">
                               <input type="hidden" name="format" value="Video">
                               <input type="hidden" name="subformat" value="Video::video_dvd">
                               <input type="hidden" name="subformat" value="Video::video_vhs">
