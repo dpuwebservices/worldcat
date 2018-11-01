@@ -1,5 +1,8 @@
 <html>
 <head>
+  <style>
+    blockquote.example{clear: both; display: block; text-align:left; margin-left: 200px; font-family: monospace;}
+  </style>  
 <link rel="stylesheet" type="text/css" href="style.css">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -44,181 +47,168 @@ $('.windowForm').submit(function(e){
 });
 </script>
 </head>
+
+<body>
 <div id="search-wrapper">
 <div class="tabs">
-    <div class="tab-links">
-		 <a href="#tab1" class="selected"><h4><span class="fa fa-university fa-2x"></span><br /><span class="tab-label">Everything</span></h4></a>
-        <a href="#tab2"><h4><span class="fa fa-book fa-2x"></span><span class="tab-label"><br />Books</span></h4></a>
-        <a href="#tab3"><h4><span class="fa fa-list-alt fa-2x"></span><span class="tab-label"><br />Articles</span></h4></a>
-        <a href="#tab4"><h4><span class="fa fa-video-camera fa-2x"></span><span class="tab-label"><br />Video</span></h4></a>
-        <!--Searches ContentDM-->
-         <a href="#tab5"><h4><span class="fa fa-archive fa-2x"></span><span class="tab-label"><br />Archives</span></h4></a>
+    <div class="tab-links" >
+        <a href="#tabEV" class="selected"><h4><span class="fa fa-university fa-2x"></span><br /><span class="tab-label">Everything</span></h4></a>
+        <a href="#tabBK"><h4><span class="fa fa-book fa-2x"></span><span class="tab-label"><br />Books</span></h4></a>
+        <a href="#tabAR"><h4><span class="fa fa-list-alt fa-2x"></span><span class="tab-label"><br />Articles</span></h4></a>
+        <a href="#tabVI"><h4><span class="fa fa-video-camera fa-2x"></span><span class="tab-label"><br />Video</span></h4></a>
     </div>
  
     <div class="tab-content">
-        <div id="tab1" class="container tab active">            
-		<form action="http://depaul.on.worldcat.org/search?" target="_blank">
+        <div id="tabEV" class="container tab active">            
+             <form action="http://depaul.on.worldcat.org/search" class="windowForm" target="_blank" method="get" class="form-horizontal" role="form">
                            <div id="search">
                            <div class="search-title">
-
                               <a id="advanced-search" title="Advanced Search" href="http://depaul.on.worldcat.org/advancedsearch" target="_blank">Advanced Search</a>
-
                               <h4>Search Everything</h4>        
-
                            </div>             
-
                            <div class="searchTerm">
-                              <input placeholder="Find books, videos, music, and more...." autofocus="autofocus" id="query" class="searchbox" name="queryString">
-                              <input type="hidden" name="format" value="all">
-                           </div>
+                            <input type="text" placeholder="Find books, videos, music, and more...." autofocus="autofocus" id="queryEV" class="searchbox form-control" name="queryString">
 						   <div class="dropdown">
 						   <select name="scope" id="searchLibrary" class="custom-dropdown-menu">
-								<option name="scope" value="sz:31296" selected>PALNI</option>
-								<option name="scope" value="">Libraries WorldWide</option>					
-							</select>
-							</div>
-							<input type="submit" class="headersubmit" value="&#xf002;" title="Search">
-
+                  <option value="999" selected>Libraries Worldwide</option> <!-- Need a fake value here because null gets stripped out -->
+                  <option value="sz:30986">I-Share Libraries</option>
+                  <option value="sz:33458">DePaul University</option>							</select>
+							</div>                            
+							<input type="submit" class="headersubmit form-control" value="&#xf002;" title="Search">
+                           </div>
                         </div>
-
                      </form>
-        </div>
-		
-		<div id="tab2" class="container tab">
-            <form action="http://depaul.on.worldcat.org/search?" target="_blank">
+<blockquote class="example">
+  <p>Formats / subformats used:</p> 
+  None defined <br>
+</blockquote>            
+        </div> <!-- End Everything search-->
+      
+      
+        <div id="tabBK" class="container tab">
+            <form action="http://depaul.on.worldcat.org/search" target="_blank" method="get" class="form-horizontal" role="form">
                            <div id="search">
                            <div class="search-title">
-
                               <a id="advanced-search" title="Advanced Search" href="http://depaul.on.worldcat.org/advancedsearch" target="_blank">Advanced Search</a>
-
                               <h4>Find Books</h4>        
-
-                           </div>             
-
-                           <div class="searchTerm">
-                              <input placeholder="Find books...." id="query" autofocus="autofocus" class="searchbox" name="queryString">
-                              <input type="hidden" name="format" value="Book">
-							  <input type="hidden" name="subformat" value="Book::book_printbook">
-                              <input type="hidden" name="subformat" value="Book::book_digital">
-                              <input type="hidden" name="subformat" value="Book::book_thsis">
-                              <input type="hidden" name="subformat" value="Book::book_mic">
-                              <input type="hidden" name="subformat" value="Book::book_largeprint">
-                              <input type="hidden" name="subformat" value="Book::book_braille">
-                              <input type="hidden" name="subformat" value="Book::book_continuing">
-                           
-                           </div>
-						   <div class="custom-dropdown-menu">
-						   <select name="scope" id="searchLibrary" class="custom-dropdown-menu">
-								<option name="scope" value="sz:31296" selected>PALNI</option>
-								<!--<input type="hidden" name="scope" value="sz:35530">-->
-								<option name="scope" value="">Libraries WorldWide</option>	
-							</select>
-							</div>
-							<input type="submit" class="headersubmit" value="&#xf002;" title="Search">
-
-                        </div>
-
-                     </form>
-        </div>
- 
-        <div id="tab3" class="container tab">
-            <form action="http://depaul.on.worldcat.org/search?" target="_blank">
-                           <div id="search">
-                           <div class="search-title">
-
-                              <a id="advanced-search" title="Advanced Search" href="http://depaul.on.worldcat.org/advancedsearch" target="_blank">Advanced Search</a>
-
-                              <h4>Find Articles</h4>
                            </div>             
                            <div class="searchTerm">
-                              <input placeholder="Find articles...." autofocus="autofocus" id="query" class="searchbox" name="queryString">
-                              <input type="hidden" name="format" value="Artchap">
-                              <input type="hidden" name="subformat" value="Artchap::artchap_artcl">
-                            
-                           </div>
+                              <input type="hidden" name="sortKey" value="LIBRARY_PLUS_RELEVANCE">
+							  <input type="text" placeholder="Find books...." autofocus="autofocus" id="queryBK" class="searchbox form-control" name="queryString">
+                <input type="hidden" name="format" value="Book">
+                <input type="hidden" name="subformat" value="Book::book_printbook">
+                <input type="hidden" name="subformat" value="Book::book_digital">
+                <input type="hidden" name="subformat" value="Book::book_thsis">
+                <input type="hidden" name="subformat" value="Book::book_mic">
+                <input type="hidden" name="subformat" value="Book::book_largeprint">
+                <input type="hidden" name="subformat" value="Book::book_braille">
+                <input type="hidden" name="subformat" value="Book::book_continuing">
+                <input type="hidden" name="database" value="all">
+                <input type="hidden" name="author" value="all">
+                <input type="hidden" name="year" value="all">
+                <input type="hidden" name="yearFrom" value="">
+                <input type="hidden" name="yearTo" value="">
+                <input type="hidden" name="language" value="all">
 						   <div class="dropdown">
 						   <select name="scope" id="searchLibrary" class="custom-dropdown-menu">
-							<option name="scope" value="sz:31296" selected>PALNI</option>
-								<!--<input type="hidden" name="scope" value="sz:35530">-->
-								<option name="scope" value="">Libraries WorldWide</option>	
-							</select>
-							
-							</div>
-							<input type="submit" class="headersubmit" value="&#xf002;" title="Search">
+                  <option value="999" selected>Libraries Worldwide</option> <!-- Need a fake value here because null gets stripped out -->
+                  <option value="sz:30986">I-Share Libraries</option>
+                  <option value="sz:33458">DePaul University</option>							</select>
+							</div>                  
+                <input type="submit" class="headersubmit form-control" value="&#xf002;" title="Search">
+                           </div>
                         </div>
-
                      </form>
-        </div>
- 
-        <div id="tab4" class="container tab">
-           <form action="http://depaul.on.worldcat.org/search?" target="_blank">
+<blockquote class="example">
+  <p>Formats / subformats used:</p> 
+name="format" value="Book"> <br>
+name="subformat" value="Book::book_printbook"> <br>
+name="subformat" value="Book::book_digital"> <br>
+name="subformat" value="Book::book_thsis"> <br>
+name="subformat" value="Book::book_mic"> <br>
+name="subformat" value="Book::book_largeprint"> <br>
+name="subformat" value="Book::book_braille"> <br>
+name="subformat" value="Book::book_continuing"> <br>
+name="database" value="all"> <br>
+name="author" value="all"> <br>
+name="year" value="all"> <br>
+name="yearFrom" value=""> <br>
+name="yearTo" value=""> <br>
+name="language" value="all"> <br>
+</blockquote>             
+        </div> <!-- End Book search-->
+      
+      
+        <div id="tabAR" class="container tab">
+            <form action="http://depaul.on.worldcat.org/search" target="_blank" method="get" class="form-horizontal" role="form">
                            <div id="search">
                            <div class="search-title">
-
                               <a id="advanced-search" title="Advanced Search" href="http://depaul.on.worldcat.org/advancedsearch" target="_blank">Advanced Search</a>
-
-                              <h4>Find Videos</h4>        
+                              <h4>Find Articles</h4>        
                            </div>             
                            <div class="searchTerm">
-                              <input placeholder="Find videos...." autofocus="autofocus" id="query" class="searchbox" name="queryString">
+                            <input type="hidden" name="sortKey" value="LIBRARY_PLUS_RELEVANCE">
+                            <input type="hidden" name="databaseList" value="638">
+                            <input type="text" placeholder="Find articles...." autofocus="autofocus" id="queryAR" class="searchbox form-control" name="queryString">
+                            <input type="hidden" name="format" value="Artchap">
+                            <input type="hidden" name="subformat" value="Artchap::artchap_artcl">
+						   <div class="dropdown">
+						   <select name="scope" id="searchLibrary" class="custom-dropdown-menu">
+                  <option value="999" selected>Libraries Worldwide</option> <!-- Need a fake value here because null gets stripped out -->
+                  <option value="sz:30986">I-Share Libraries</option>
+                  <option value="sz:33458">DePaul University</option>							</select>
+							</div>                              
+                            <input type="submit" class="headersubmit form-control" value="&#xf002;" title="Search">
+                           </div>
+                        </div>
+                     </form>
+<blockquote class="example">
+  <p>Formats / subformats used:</p> 
+  name="format" value="Artchap"> <br>
+  name="subformat" value="Artchap::artchap_artcl"> <br>
+</blockquote>          
+        </div> <!-- End Article search-->
+        
+
+        <div id="tabVI" class="container tab">
+           <form action="http://depaul.on.worldcat.org/search" target="_blank" method="get" class="form-horizontal" role="form">
+                           <div id="search">
+                           <div class="search-title">
+                              <a id="advanced-search" title="Advanced Search" href="http://depaul.on.worldcat.org/advancedsearch" target="_blank">Advanced Search</a>
+                              <h4>Find Video</h4>        
+                           </div>             
+                           <div class="searchTerm">
+                              <input type="hidden" name="sortKey" value="LIBRARY_PLUS_RELEVANCE">
+                              <input type="hidden" name="databaseList" value="638">
+                              <input type="text" placeholder="Find videos...." autofocus="autofocus" id="queryVI" class="searchbox form-control" name="queryString">
                               <input type="hidden" name="format" value="Video">
                               <input type="hidden" name="subformat" value="Video::video_dvd">
                               <input type="hidden" name="subformat" value="Video::video_vhs">
                               <input type="hidden" name="subformat" value="Video::video_film">
                               <input type="hidden" name="subformat" value="Video::video_digital">
                               <input type="hidden" name="subformat" value="Video::video_bluray">
-							
-                           </div>
 						   <div class="dropdown">
 						   <select name="scope" id="searchLibrary" class="custom-dropdown-menu">
-							<option name="scope" value="sz:31296" selected>PALNI</option>
-								<!--<input type="hidden" name="scope" value="sz:35530">-->
-								<option name="scope" value="">Libraries WorldWide</option>	
-							</select>
-							
-							</div>
-							<input type="submit" class="headersubmit" value="&#xf002;" title="Search">
-                        </div>
-
-                     </form>
-        </div>
-        <div id="tab5" class="tab">
-           <form method="GET" action="http://palni.contentdm.oclc.org/cdm4/results.php" target="_blank">
-                           <div id="search">
-                           <div class="search-title">
-
-                              <a id="advanced-search" title="PALNI Digital Collections" href="http://palni.contentdm.oclc.org/cdm/" target="_blank">PALNI Digital Collections</a>
-
-                              <h4>Find Archives</h4>        
-                           </div>             
-                           <div class="searchTerm">
-                              <input placeholder="Find digital archives...." autofocus="autofocus" id="query" class="searchbox" style="width:90%;padding-right:0px" name="CISOBOX1">
-							  <input type="hidden" name="CISOOP1" value="all">
-<input type="hidden" name="CISOFIELD1" value="CISOSEARCHALL">
-<input type="hidden" name="CISORESTMP" value="results.php">
-<input type="hidden" name="CISOVIEWTMP" value="item_viewer.php">
-<input type="hidden" name="CISOMODE" value="grid">
-<input type="hidden" name="CISOGRID" value="thumbnail,A,1;title,A,1;subjec,A,0;descri,200,0;none,A,0;20;relevancy,none,none,none,none">
-<input type="hidden" name="CISOBIB" value="title,A,1,N;subjec,A,0,N;descri,200,0,N;none,A,0,N;none,A,0,N;20;relevancy,none,none,none,none">
-<input type="hidden" name="CISOTHUMB" value="20 (4x5);relevancy,none,none,none,none">
-<input type="hidden" name="CISOTITLE" value="20;title,none,none,none,none">
-<input type="hidden" name="CISOHIERA" value="20;subjec,title,none,none,none">
-<input type="hidden" name="CISOSUPPRESS" value="0">
-<input type="hidden" name="CISOROOT" value="all">
+                  <option value="999" selected>Libraries Worldwide</option> <!-- Need a fake value here because null gets stripped out -->
+                  <option value="sz:30986">I-Share Libraries</option>
+                  <option value="sz:33458">DePaul University</option>							</select>
+							</div>                                
+                              <input type="submit" class="headersubmit form-control" value="&#xf002;" title="Search">
                            </div>
-						   <div class="dropdown">
-						   <!--<select name="scope" id="searchLibrary" class="dropdown-menu">
-							<option name="scope" value="sz:31296" selected>PALNI</option>
-								<input type="hidden" name="scope" value="sz:35530">
-								<option name="scope" value="">Libraries WorldWide</option>	
-							</select>-->
-							
-							</div>
-							<input type="submit" class="headersubmit" value="&#xf002;" title="Search">
                         </div>
-
                      </form>
-        </div>
+<blockquote class="example">
+  <p>Formats / subformats used:</p> 
+  name="format" value="Video"> <br>
+  name="subformat" value="Video::video_dvd"> <br>
+  name="subformat" value="Video::video_vhs"> <br>
+  name="subformat" value="Video::video_film"> <br>
+  name="subformat" value="Video::video_digital"> <br>
+  name="subformat" value="Video::video_bluray"> <br>            
+</blockquote>
+</div> <!-- End Video search-->
+
+
     </div>
 </div>
 </div>
