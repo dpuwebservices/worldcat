@@ -54,8 +54,9 @@ $('.windowForm').submit(function(e){
     <div class="tab-links" >
         <a href="#tabEV" class="selected"><h4><span class="fa fa-university fa-2x"></span><br /><span class="tab-label">Everything</span></h4></a>
         <a href="#tabBK"><h4><span class="fa fa-book fa-2x"></span><span class="tab-label"><br />Books</span></h4></a>
-        <a href="#tabAR"><h4><span class="fa fa-list-alt fa-2x"></span><span class="tab-label"><br />Articles</span></h4></a>
+        <a href="#tabART"><h4><span class="fa fa-list-alt fa-2x"></span><span class="tab-label"><br />Articles</span></h4></a>
         <a href="#tabVI"><h4><span class="fa fa-video-camera fa-2x"></span><span class="tab-label"><br />Video</span></h4></a>
+        <a href="#tab5"><h4><span class="fa fa-archive fa-2x"></span><span class="tab-label"><br />Archives</span></h4></a>        
     </div>
  
     <div class="tab-content">
@@ -139,7 +140,7 @@ name="language" value="all"> <br>
         </div> <!-- End Book search-->
       
       
-        <div id="tabAR" class="container tab">
+        <div id="tabART" class="container tab">
             <form action="http://depaul.on.worldcat.org/search" target="_blank" method="get" class="form-horizontal" role="form">
                            <div id="search">
                            <div class="search-title">
@@ -149,7 +150,7 @@ name="language" value="all"> <br>
                            <div class="searchTerm">
                             <input type="hidden" name="sortKey" value="LIBRARY_PLUS_RELEVANCE">
                             <input type="hidden" name="databaseList" value="638">
-                            <input type="text" placeholder="Find articles...." autofocus="autofocus" id="queryAR" class="searchbox form-control" name="queryString">
+                            <input type="text" placeholder="Find articles...." autofocus="autofocus" id="queryART" class="searchbox form-control" name="queryString">
                             <input type="hidden" name="format" value="Artchap">
                             <input type="hidden" name="subformat" value="Artchap::artchap_artcl">
 						   <div class="dropdown">
