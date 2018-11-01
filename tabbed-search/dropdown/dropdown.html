@@ -209,7 +209,43 @@ name="language" value="all"> <br>
 </blockquote>
 </div> <!-- End Video search-->
 
+        <div id="tab5" class="tab">
+           <form method="GET" action="http://palni.contentdm.oclc.org/cdm4/results.php" target="_blank">
+                           <div id="search">
+                           <div class="search-title">
 
+                              <a id="advanced-search" title="PALNI Digital Collections" href="http://palni.contentdm.oclc.org/cdm/" target="_blank">PALNI Digital Collections</a>
+
+                              <h4>Find Archives</h4>        
+                           </div>             
+                           <div class="searchTerm">
+                              <input placeholder="Find digital archives...." autofocus="autofocus" id="query" class="searchbox" style="width:90%;padding-right:0px" name="CISOBOX1">
+							  <input type="hidden" name="CISOOP1" value="all">
+<input type="hidden" name="CISOFIELD1" value="CISOSEARCHALL">
+<input type="hidden" name="CISORESTMP" value="results.php">
+<input type="hidden" name="CISOVIEWTMP" value="item_viewer.php">
+<input type="hidden" name="CISOMODE" value="grid">
+<input type="hidden" name="CISOGRID" value="thumbnail,A,1;title,A,1;subjec,A,0;descri,200,0;none,A,0;20;relevancy,none,none,none,none">
+<input type="hidden" name="CISOBIB" value="title,A,1,N;subjec,A,0,N;descri,200,0,N;none,A,0,N;none,A,0,N;20;relevancy,none,none,none,none">
+<input type="hidden" name="CISOTHUMB" value="20 (4x5);relevancy,none,none,none,none">
+<input type="hidden" name="CISOTITLE" value="20;title,none,none,none,none">
+<input type="hidden" name="CISOHIERA" value="20;subjec,title,none,none,none">
+<input type="hidden" name="CISOSUPPRESS" value="0">
+<input type="hidden" name="CISOROOT" value="all">
+                           </div>
+						   <div class="dropdown">
+						   <!--<select name="scope" id="searchLibrary" class="dropdown-menu">
+							<option name="scope" value="sz:31296" selected>PALNI</option>
+								<input type="hidden" name="scope" value="sz:35530">
+								<option name="scope" value="">Libraries WorldWide</option>	
+							</select>-->
+							
+							</div>
+							<input type="submit" class="headersubmit" value="&#xf002;" title="Search">
+                        </div>
+
+                     </form>
+        </div> <!--End Archives Search-->
     </div>
 </div>
 </div>
