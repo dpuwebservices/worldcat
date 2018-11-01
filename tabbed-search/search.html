@@ -73,38 +73,29 @@ $(document).ready(function(){
              <form action="http://depaul.on.worldcat.org/search" class="windowForm" target="_blank" method="get" class="form-horizontal" role="form">
                            <div id="search">
                            <div class="search-title">
-
                               <a id="advanced-search" title="Advanced Search" href="http://depaul.on.worldcat.org/advancedsearch" target="_blank">Advanced Search</a>
-
                               <h4>Search Everything</h4>        
-
                            </div>             
-
                            <div class="searchTerm">
                             <input type="text" placeholder="Find books, videos, music, and more...." autofocus="autofocus" id="queryEV" class="searchbox form-control" name="queryString">
 							<input type="submit" class="headersubmit form-control" value="&#xf002;" title="Search">
                            </div>
-
                         </div>
-
                      </form>
 <blockquote class="example">
   <p>Formats / subformats used:</p> 
-None defined
+  None defined <br>
 </blockquote>            
-        </div>
- 
+        </div> <!-- End Everything search-->
+      
+      
         <div id="tabBK" class="container tab">
             <form action="http://depaul.on.worldcat.org/search" target="_blank" method="get" class="form-horizontal" role="form">
                            <div id="search">
                            <div class="search-title">
-
                               <a id="advanced-search" title="Advanced Search" href="http://depaul.on.worldcat.org/advancedsearch" target="_blank">Advanced Search</a>
-
                               <h4>Find Books</h4>        
-
                            </div>             
-
                            <div class="searchTerm">
                               <input type="hidden" name="sortKey" value="LIBRARY_PLUS_RELEVANCE">
 							  <input type="text" placeholder="Find books...." autofocus="autofocus" id="queryBK" class="searchbox form-control" name="queryString">
@@ -123,12 +114,8 @@ None defined
                 <input type="hidden" name="yearTo" value="">
                 <input type="hidden" name="language" value="all">
                 <input type="submit" class="headersubmit form-control" value="&#xf002;" title="Search">
-
-              
                            </div>
-
                         </div>
-
                      </form>
 <blockquote class="example">
   <p>Formats / subformats used:</p> 
@@ -147,15 +134,14 @@ name="yearFrom" value=""> <br>
 name="yearTo" value=""> <br>
 name="language" value="all"> <br>
 </blockquote>             
-        </div>
- 
+        </div> <!-- End Book search-->
+      
+      
         <div id="tabAR" class="container tab">
             <form action="http://depaul.on.worldcat.org/search" target="_blank" method="get" class="form-horizontal" role="form">
                            <div id="search">
                            <div class="search-title">
-
                               <a id="advanced-search" title="Advanced Search" href="http://depaul.on.worldcat.org/advancedsearch" target="_blank">Advanced Search</a>
-
                               <h4>Find Articles</h4>        
                            </div>             
                            <div class="searchTerm">
@@ -166,25 +152,21 @@ name="language" value="all"> <br>
                             <input type="hidden" name="subformat" value="Artchap::artchap_artcl">
                             <input type="submit" class="headersubmit form-control" value="&#xf002;" title="Search">
                            </div>
-
                         </div>
-
                      </form>
 <blockquote class="example">
   <p>Formats / subformats used:</p> 
   name="format" value="Artchap"> <br>
   name="subformat" value="Artchap::artchap_artcl"> <br>
 </blockquote>          
-          
-        </div>
- 
+        </div> <!-- End Article search-->
+        
+
         <div id="tabVI" class="container tab">
            <form action="http://depaul.on.worldcat.org/search" target="_blank" method="get" class="form-horizontal" role="form">
                            <div id="search">
                            <div class="search-title">
-
                               <a id="advanced-search" title="Advanced Search" href="http://depaul.on.worldcat.org/advancedsearch" target="_blank">Advanced Search</a>
-
                               <h4>Find Video</h4>        
                            </div>             
                            <div class="searchTerm">
@@ -199,11 +181,8 @@ name="language" value="all"> <br>
                               <input type="hidden" name="subformat" value="Video::video_bluray">
                               <input type="submit" class="headersubmit form-control" value="&#xf002;" title="Search">
                            </div>
-
                         </div>
-
                      </form>
-          
 <blockquote class="example">
   <p>Formats / subformats used:</p> 
   name="format" value="Video"> <br>
@@ -213,7 +192,9 @@ name="language" value="all"> <br>
   name="subformat" value="Video::video_digital"> <br>
   name="subformat" value="Video::video_bluray"> <br>            
 </blockquote>
-</div>
+</div> <!-- End Video search-->
+
+
     </div>
 </div>
 </div>
